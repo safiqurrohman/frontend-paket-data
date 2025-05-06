@@ -1,0 +1,10 @@
+export { default as Login } from '../pages/auth/Login';
+export { default as Register } from '../pages/auth/Register';
+export { default as Custemer } from '../pages/custemer/Custemer';
+export { default as Logout } from '../pages/auth/Logout';
+export { default as RiwayatTransaksi} from '../pages/custemer/RiwayatTransaksi';
+export { default as PaketData } from '../pages/admin/PeketData';
+export { default as Dashboard} from '../pages/admin/Dashboard';
+export { default as User } from '../pages/admin/User';
+export { default as Navbar } from '../component/Navbar';
+export { default as Footer} from '../component/Footer';

@@ -1,0 +1,152 @@
+{
+  "Users": [
+    {
+      "id": "1",
+      "username": "admin",
+      "email": "admin@gmail.com",
+      "phone": "0877408987847",
+      "password": "admin1234",
+      "role": "admin"
+    },
+    {
+      "id": "dd27",
+      "username": "safi",
+      "email": "safi@gmail.com",
+      "phone": "0878635352",
+      "password": "safi1234",
+      "role": "custemer"
+    },
+    {
+      "id": "a3af",
+      "username": "sindy",
+      "email": "sindy@gmail.com",
+      "phone": "087865675555",
+      "password": "sindy1234",
+      "role": "custemer"
+    }
+  ],
+  "PaketData": [
+    {
+      "id": "1",
+      "nama": "Paket Data 10GB",
+      "provider": "Telkomsel",
+      "harga": "39.000",
+      "deskripsi": "Masa aktif 30 hari. Berlaku di semua jaringan."
+    },
+    {
+      "id": "2",
+      "nama": "Paket Data 20GB",
+      "provider": "Telkomsel",
+      "harga": "60.000",
+      "deskripsi": "Masa aktif 30 hari. Bonus 2GB YouTube."
+    },
+    {
+      "id": "4",
+      "nama": "Paket Data Unlimited",
+      "provider": "XL",
+      "harga": "90.000",
+      "deskripsi": "Unlimited harian 1GB/hari. Berlaku 30 hari."
+    },
+    {
+      "id": "5",
+      "nama": "Paket Data Unlimited",
+      "provider": "XL",
+      "harga": "90.000",
+      "deskripsi": "Unlimited harian 1GB/hari. Berlaku 30 hari."
+    },
+    {
+      "id": "9fd9",
+      "nama": "Paket Data 25B ",
+      "provider": "Telkomsel",
+      "harga": "80.000",
+      "deskripsi": "Paket internet 25GB berlaku selama 30 hari."
+    },
+    {
+      "id": "dad0",
+      "nama": "Paket data Unlimited",
+      "provider": "Telkomsel",
+      "harga": "24.000",
+      "deskripsi": "Unlimited harian 1GB/hari, Berlaku selama 7 hari"
+    }
+  ],
+  "Transaksi": [
+    {
+      "id": "2fb6",
+      "id_user": "dd27",
+      "id_paket": "2",
+      "nama": "Paket Data 20GB",
+      "harga": "60.000",
+      "tanggal": "2025-05-02 01:23:32"
+    },
+    {
+      "id": "ba43",
+      "id_user": "dd27",
+      "id_paket": "2",
+      "nama": "Paket Data 20GB",
+      "harga": "60.000",
+      "tanggal": "2025-05-02 01:24:15"
+    },
+    {
+      "id": "f628",
+      "id_user": "dd27",
+      "id_paket": "3",
+      "nama": "Paket Data Unlimited",
+      "harga": "80.000",
+      "tanggal": "2025-05-02 02:15:30"
+    },
+    {
+      "id": "5784",
+      "id_user": "dd27",
+      "id_paket": "2",
+      "nama": "Paket Data 20GB",
+      "harga": "60.000",
+      "tanggal": "2025-05-02 12:36:16"
+    },
+    {
+      "id": "24a6",
+      "id_user": "dd27",
+      "id_paket": "5",
+      "nama": "Paket Data Unlimited",
+      "harga": "90.000",
+      "tanggal": "2025-05-02 12:36:31"
+    },
+    {
+      "id": "7f68",
+      "id_user": "dd27",
+      "id_paket": "4",
+      "nama": "Paket Data Unlimited",
+      "harga": "90.000",
+      "tanggal": "2025-05-02 12:55:34"
+    },
+    {
+      "id": "5840",
+      "id_user": "4e3a",
+      "id_paket": "5",
+      "nama": "Paket Data Unlimited",
+      "harga": "90.000",
+      "tanggal": "2025-05-02 12:56:16"
+    },
+    {
+      "id": "8e6d",
+      "id_user": "dd27",
+      "id_paket": "9fd9",
+      "nama": "Paket Data 25B ",
+      "harga": "80.000",
+      "tanggal": "2025-05-03 10:15:15"
+    }
+  ],
+  "Keranjang": [
+    {
+      "id": "2",
+      "id_user": "dd27",
+      "id_paket": "2",
+      "qty": 1
+    },
+    {
+      "id": "3",
+      "id_user": "dd27",
+      "id_paket": "2",
+      "qty": 1
+    }
+  ]
+}
