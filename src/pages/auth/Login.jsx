@@ -15,19 +15,16 @@ const Login = () => {
     e.preventDefault();
 
     try{
-      const res = await axios.get(`https://safi-5d40c-default-rtdb.asia-southeast1.firebasedatabase.app/Users.json?username=${username}`)
-
-      if(res.data.length === 0){
-        setErrorMs('Username yang anda masukkan tidak terdaftar!')
+      const res = await axios.get('https://safi-5d40c-default-rtdb.asia-southeast1.firebasedatabase.app/Users.json');
+  
+      // Cari user dengan username yang sesuai
+      const user = Object.values(res.data).find(u => u.username === username);
+      
+      if (!user) {
+        setErrorMs('Username yang anda masukkan tidak terdaftar!');
         return;
       }
-
-      const user = res.data[0]
-
-      if(user.password !== password){
-        setErrorMs('Password yang anda masukkan salah!')
-        return;
-      }
+      
 
       //login berhasil
       setErrorMs('');
