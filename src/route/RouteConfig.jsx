@@ -18,6 +18,8 @@ const RouteConfig = () => {
         <Route path='/paketdata'  element={<PaketData />}/>
         <Route path='/daftaruser'  element={<User />}/>
 
+        <Route path='*' element={<h1>404 not found</h1>} />
+
   
     </Routes>
     
