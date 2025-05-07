@@ -15,8 +15,7 @@ const Login = () => {
     e.preventDefault();
 
     try{
-      const res = await axios.get(`https://safi-5d40c-default-rtdb.asia-southeast1.firebasedatabase.app
-/.json/Users?username=${username}`)
+      const res = await axios.get(`https://safi-5d40c-default-rtdb.asia-southeast1.firebasedatabase.app/Users.json?username=${username}`)
 
       if(res.data.length === 0){
         setErrorMs('Username yang anda masukkan tidak terdaftar!')

@@ -26,15 +26,13 @@ const Register = () => {
 
     try{
 
-      const cekUsername = await axios.get(`https://safi-5d40c-default-rtdb.asia-southeast1.firebasedatabase.app
-/.json/Users?username=${formRegis.username}`);
+      const cekUsername = await axios.get(`https://safi-5d40c-default-rtdb.asia-southeast1.firebasedatabase.app/Users.json?username=${formRegis.username}`);
       if(cekUsername.data.length > 0 ){
         alert('Username telah digunakan!!');
         return;
       }
 
-      await axios.post(`https://safi-5d40c-default-rtdb.asia-southeast1.firebasedatabase.app
-/.json/Users`,
+      await axios.post(`https://safi-5d40c-default-rtdb.asia-southeast1.firebasedatabase.app/Users.json`,
         {
           username: formRegis.username, 
           email: formRegis.email, 
