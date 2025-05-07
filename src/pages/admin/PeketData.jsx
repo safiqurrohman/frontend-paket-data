@@ -30,7 +30,7 @@ const PeketData = () => {
 
   const fetchData = async () => {
     try {
-      const res = await axios.get("http://localhost:3001/PaketData");
+      const res = await axios.get("https://5c08fccd-5676-4861-ba04-86d1d3492805-00-2754o0qlhskmm.pike.replit.dev/PaketData");
       setDataList(res.data);
       updateLocalStorage(res.data);
     } catch (err) {
@@ -66,9 +66,9 @@ const PeketData = () => {
 
     try {
       if (editData) {
-        await axios.put(`http://localhost:3001/PaketData/${editData.id}`, formData);
+        await axios.put(`https://5c08fccd-5676-4861-ba04-86d1d3492805-00-2754o0qlhskmm.pike.replit.dev/PaketData/${editData.id}`, formData);
       } else {
-        await axios.post("http://localhost:3001/PaketData", formData);
+        await axios.post("https://5c08fccd-5676-4861-ba04-86d1d3492805-00-2754o0qlhskmm.pike.replit.dev/PaketData", formData);
       }
       setShowModal(false);
       fetchData();

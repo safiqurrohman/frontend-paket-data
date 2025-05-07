@@ -17,7 +17,7 @@ const Custemer = () => {
 
   const fetchData = async () => {
     try {
-      const res = await axios.get(`http://localhost:3001/PaketData`);
+      const res = await axios.get(`https://5c08fccd-5676-4861-ba04-86d1d3492805-00-2754o0qlhskmm.pike.replit.dev/PaketData`);
       setPaketData(res.data);
       localStorage.setItem('PaketData', JSON.stringify(res.data));
     } catch (error) {
@@ -38,7 +38,7 @@ const Custemer = () => {
   const handleKonfirmasi = async () => {
     const user = JSON.parse(localStorage.getItem("user"));
     try {
-      await axios.post("http://localhost:3001/Transaksi", {
+      await axios.post("https://5c08fccd-5676-4861-ba04-86d1d3492805-00-2754o0qlhskmm.pike.replit.dev/Transaksi", {
         id_user: user.id,
         id_paket: selectedPaket.id,
         nama: selectedPaket.nama,

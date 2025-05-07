@@ -15,7 +15,7 @@ const Login = () => {
     e.preventDefault();
 
     try{
-      const res = await axios.get(`http://localhost:3001/Users?username=${username}`)
+      const res = await axios.get(`https://5c08fccd-5676-4861-ba04-86d1d3492805-00-2754o0qlhskmm.pike.replit.dev/Users?username=${username}`)
 
       if(res.data.length === 0){
         setErrorMs('Username yang anda masukkan tidak terdaftar!')

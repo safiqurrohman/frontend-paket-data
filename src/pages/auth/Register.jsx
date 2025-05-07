@@ -26,13 +26,13 @@ const Register = () => {
 
     try{
 
-      const cekUsername = await axios.get(`http://localhost:3001/Users?username=${formRegis.username}`);
+      const cekUsername = await axios.get(`https://5c08fccd-5676-4861-ba04-86d1d3492805-00-2754o0qlhskmm.pike.replit.dev/Users?username=${formRegis.username}`);
       if(cekUsername.data.length > 0 ){
         alert('Username telah digunakan!!');
         return;
       }
 
-      await axios.post(`http://localhost:3001/Users`,
+      await axios.post(`https://5c08fccd-5676-4861-ba04-86d1d3492805-00-2754o0qlhskmm.pike.replit.dev/Users`,
         {
           username: formRegis.username, 
           email: formRegis.email, 

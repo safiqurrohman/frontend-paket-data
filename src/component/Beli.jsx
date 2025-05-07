@@ -15,7 +15,7 @@ const Beli = () => {
   useEffect(() => {
     const fetchPaket = async () => {
       try {
-        const res = await axios.get(`http://localhost:3001/PaketData/${id}`);
+        const res = await axios.get(`https://5c08fccd-5676-4861-ba04-86d1d3492805-00-2754o0qlhskmm.pike.replit.dev/PaketData/${id}`);
         
         setPaket(res.data);
       } catch (error) {
@@ -30,7 +30,7 @@ const Beli = () => {
 
   const handleKonfirmasi = async () => {
     try {
-      await axios.post("http://localhost:3001/Transaksi", {
+      await axios.post("https://5c08fccd-5676-4861-ba04-86d1d3492805-00-2754o0qlhskmm.pike.replit.dev/Transaksi", {
         id_user : id_user,
         id_paket : id,
         nama: paket.nama,

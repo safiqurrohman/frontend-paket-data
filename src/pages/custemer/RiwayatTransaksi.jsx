@@ -23,7 +23,7 @@ const RiwayatTransaksi = () => {
 
   const fetchTransaksi = async () => {
     try {
-      const res = await axios.get("http://localhost:3001/Transaksi");
+      const res = await axios.get("https://5c08fccd-5676-4861-ba04-86d1d3492805-00-2754o0qlhskmm.pike.replit.dev/Transaksi");
       setTransaksi(res.data);
     } catch (error) {
       console.error("Gagal memuat transaksi:", error);
