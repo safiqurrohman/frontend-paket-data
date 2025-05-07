@@ -18,7 +18,7 @@ const User = () => {
 
   const fetchData = async () => {
     try {
-      const res = await axios.get("https://5c08fccd-5676-4861-ba04-86d1d3492805-00-2754o0qlhskmm.pike.replit.dev/Users");
+      const res = await axios.get("https://safi-5d40c-default-rtdb.asia-southeast1.firebasedatabase.app/Users.json");
       setDataUser(res.data);
     } catch (err) {
       console.error("Gagal mengambil data user!");
@@ -47,7 +47,7 @@ const User = () => {
     if (Object.keys(newErrors).length > 0) return;
 
     try {
-      await axios.put(`https://5c08fccd-5676-4861-ba04-86d1d3492805-00-2754o0qlhskmm.pike.replit.dev/Users/${editUser.id}`, formUser);
+      await axios.put(`https://5c08fccd-5676-4861-ba04-86d1d3492805-00-2754o0qlhskmm.pike.replit.dev/Users/${editUser.id}.json`, formUser);
       setShowModal(false);
       fetchData();
     } catch (err) {

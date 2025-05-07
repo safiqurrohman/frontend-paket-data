@@ -4,7 +4,7 @@ import RouteConfig from './route/RouteConfig';
 
 export default function App() {
   return (
-    <Router basename="/frontend-paket-data/">
+    <Router >
         <RouteConfig />
     </Router>
   );

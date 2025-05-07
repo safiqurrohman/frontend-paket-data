@@ -30,9 +30,20 @@ const PeketData = () => {
 
   const fetchData = async () => {
     try {
-      const res = await axios.get("https://5c08fccd-5676-4861-ba04-86d1d3492805-00-2754o0qlhskmm.pike.replit.dev/PaketData");
-      setDataList(res.data);
-      updateLocalStorage(res.data);
+      const res = await axios.get("https://safi-5d40c-default-rtdb.asia-southeast1.firebasedatabase.app/PaketData.json");
+      const firebaseData = res.data;
+  
+      if (firebaseData) {
+        const convertedData = Object.keys(firebaseData).map((key) => ({
+          id: key,
+          ...firebaseData[key],
+        }));
+  
+        setDataList(convertedData);
+        updateLocalStorage(convertedData);
+      } else {
+        setDataList([]);
+      }
     } catch (err) {
       const local = localStorage.getItem("paketData");
       if (local) setDataList(JSON.parse(local));
@@ -66,9 +77,9 @@ const PeketData = () => {
 
     try {
       if (editData) {
-        await axios.put(`https://5c08fccd-5676-4861-ba04-86d1d3492805-00-2754o0qlhskmm.pike.replit.dev/PaketData/${editData.id}`, formData);
+        await axios.put(`https://safi-5d40c-default-rtdb.asia-southeast1.firebasedatabase.app/PaketData/${editData.id}.json`, formData);
       } else {
-        await axios.post("https://5c08fccd-5676-4861-ba04-86d1d3492805-00-2754o0qlhskmm.pike.replit.dev/PaketData", formData);
+        await axios.post("https://safi-5d40c-default-rtdb.asia-southeast1.firebasedatabase.app/PaketData.json", formData);
       }
       setShowModal(false);
       fetchData();
@@ -84,7 +95,7 @@ const PeketData = () => {
 
   const handleDelete = async () => {
     try {
-      await axios.delete(`http://localhost:3001/PaketData/${deleteId}`);
+      await axios.delete(`https://safi-5d40c-default-rtdb.asia-southeast1.firebasedatabase.app/PaketData/${deleteId}.json`);
       setShowDeleteModal(false);
       fetchData();
     } catch (err) {
